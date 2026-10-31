@@ -7,6 +7,8 @@ fetch("https://jsonplaceholder.typicode.com/users")
 })
 .then ((data) => { 
     // receives that converted data 
+    studentList.innerHTML = "";
+    // The empty string clears the loading message before the student cards are added 
    data.forEach((student) => {
     // forEach() is a JavaScript array method that goes through each item in an array.
     studentList.innerHTML += `
