@@ -3,7 +3,10 @@ studentList.innerHTML = "<p>Loading students...</p>";
 
 fetch("https://jsonplaceholder.typicode.com/users")
 .then ((response) => {// converts the API response
-    return response.json();
+  if (!response.ok) {
+    throw new Error ("failed to fetch users");
+  }
+  return responsenjson();
 })
 .then ((data) => { 
     // receives that converted data 
