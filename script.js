@@ -1,4 +1,5 @@
 const studentList = document.getElementById("student-list");
+studentList.innerHTML = "<p>Loading students...</p>";
 
 fetch("https://jsonplaceholder.typicode.com/users")
 .then ((response) => {// converts the API response
