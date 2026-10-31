@@ -21,7 +21,8 @@ fetch("https://jsonplaceholder.typicode.com/users")
    });
 })
 .catch((error) => {
-    console.log("Oops, something went wrong:", error);
+    studentList.innerHTML = "<p> Oops! something went wrong. Please try again.</p>";
+console.log("error:",error);
 });
 
 
